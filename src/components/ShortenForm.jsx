@@ -51,15 +51,15 @@ export default function ShortenForm() {
   return (
     <>
       <section id="shorten" 
-      className="w-11/12 mx-auto bg-[url('/images/bg-shorten-mobile.svg')] bg-cover md:bg-[url('/images/bg-shorten-desktop.svg')] md:bg-cover py-4 pt-8 pb-6 rounded-md bg-[#3A3053] absolute -top-14 left-3 sm:left-10 md:left-11 lg:left-12">
-        <form onSubmit={handleShortenLink} className="flex md:justify-center items-center flex-col md:flex-row px-4 gap-4 peer">
+      className="w-11/12 mx-auto bg-[url('/images/bg-shorten-mobile.svg')] bg-cover md:bg-[url('/images/bg-shorten-desktop.svg')] md:bg-cover py-4 pt-8 pb-6 rounded-md bg-[#3A3053] absolute -top-14 left-3 sm:left-10 md:left-11 lg:left-12 ">
+        <form onSubmit={handleShortenLink} className="flex justify-start items-center md:justify-center flex-col md:flex-row px-4 gap-3 ">
           <input
             className="w-full md:w-9/12 focus:outline-none py-2 px-3 rounded-md "
             type="url"
             name="url"
             placeholder="Shorten a link here..."
           />
-           <p className="text-red-500 text-sm italic font-semibold text-left sm:hidden">{errorMsg}</p>
+           <p className=" text-red-500 text-sm italic font-semibold  sm:hidden w-full">{errorMsg}</p>
           <button className="w-full md:w-fit text-md text-white font-bold bg-[#26D0CB] hover:bg-[#97e4e4] px-5 py-2 rounded-md" type="submit">
             Shorten It!
           </button>
